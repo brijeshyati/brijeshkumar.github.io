@@ -25,8 +25,8 @@ DF1$dateyear <- anydate(DF1$dateyear)
 DF1 <- DF1[rev(order(as.Date(DF1$dateyear, format = "%Y-%m-%d"))),]
 DF1 <- DF1[,c("dateyear","dailyconfirmed","totalconfirmed","dailydeceased","totaldeceased","dailyrecovered","totalrecovered")]
 
-tt1 <- paste0("D:\\covid19india\\pkgdevlopment\\miryati\\R\\input\\cases_time_series_", format(Sys.time(), "%Y%m%d"), ".csv")
-write.table(DF1,tt1 ,na = 'NA', sep = ',',row.names = F, col.names = T,quote = TRUE)
+### tt1 <- paste0("D:\\covid19india\\pkgdevlopment\\miryati\\R\\input\\cases_time_series_", format(Sys.time(), "%Y%m%d"), ".csv")
+### write.table(DF1,tt1 ,na = 'NA', sep = ',',row.names = F, col.names = T,quote = TRUE)
 
 
 DF2 <- mydata[["statewise"]]                               #### india statewise
@@ -36,8 +36,8 @@ DF2 <- DF2[,c("state","statecode","date","confirmed","active","recovered",
               "deaths","deltaconfirmed","deltadeaths","deltarecovered")]
 DF2$statecode
 
-tt2 <- paste0("D:\\covid19india\\pkgdevlopment\\miryati\\R\\input\\statewise_", format(Sys.time(), "%Y%m%d"), ".csv")
-write.table(DF2,tt2 ,na = 'NA', sep = ',',row.names = F, col.names = T,quote = TRUE)
+### tt2 <- paste0("D:\\covid19india\\pkgdevlopment\\miryati\\R\\input\\statewise_", format(Sys.time(), "%Y%m%d"), ".csv")
+### write.table(DF2,tt2 ,na = 'NA', sep = ',',row.names = F, col.names = T,quote = TRUE)
 
 
 DF3 <- mydata[["tested"]]                               #### india tested
@@ -59,8 +59,8 @@ DF3 <- DF3[rev(order(as.Date(DF3$dateyear, format = "%Y-%m-%d"))),]
 master <- merge(x=DF1,y=DF3,by.x='dateyear',by.y='dateyear',all=F)
 master <- master[rev(order(as.Date(master$dateyear, format = "%Y-%m-%d"))),]
 
-tt3 <- paste0("D:\\covid19india\\pkgdevlopment\\miryati\\R\\input\\statewise_8_", format(Sys.time(), "%Y%m%d"), ".csv")
-write.table(master,tt3 ,na = 'NA', sep = ',',row.names = F, col.names = T,quote = TRUE)
+#### tt3 <- paste0("D:\\covid19india\\pkgdevlopment\\miryati\\R\\input\\statewise_8_", format(Sys.time(), "%Y%m%d"), ".csv")
+#### write.table(master,tt3 ,na = 'NA', sep = ',',row.names = F, col.names = T,quote = TRUE)
 
 ####### str(master)
 gc()

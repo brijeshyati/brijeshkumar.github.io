@@ -55,30 +55,30 @@ DF2$statecode
 ### write.table(DF2,tt2 ,na = 'NA', sep = ',',row.names = F, col.names = T,quote = TRUE)
 
 
-DF3 <- mydata[["tested"]]                               #### india tested
-DF3$date <- as.Date(DF3$updatetimestamp,"%d/%m/%y")
-DF3 <- DF3[rev(order(as.Date(DF3$date, format = "%Y-%m-%d"))),]
-names(DF3)
-DF3 <- DF3[,c("date","totalsamplestested")]
-setnames(DF3,c("dateyear","totalsamplestested"))
-DF3 <- data.table(DF3)
-DF3 <- aggregate(totalsamplestested ~ dateyear, data = DF3, max)
-####### DF3 <- DF3[rev(order(as.Date(DF3$dateyear, format = "%Y-%m-%d"))),]
-DF3$totalsamplestested[DF3$totalsamplestested==""] <- NA
-###### str(DF3)
-DF3$totalsamplestested <- na.locf(DF3$totalsamplestested, na.rm=FALSE)
-DF3$totalsamplestested <- as.integer(DF3$totalsamplestested)
-DF3$Dailysampletested <- ave(DF3$totalsamplestested, FUN=function(x) c(0, diff(x)))
-DF3 <- DF3[rev(order(as.Date(DF3$dateyear, format = "%Y-%m-%d"))),]
+############# DF3 <- mydata[["tested"]]                               #### india tested
+############# DF3$date <- as.Date(DF3$updatetimestamp,"%d/%m/%y")
+############# DF3 <- DF3[rev(order(as.Date(DF3$date, format = "%Y-%m-%d"))),]
+############# names(DF3)
+############# DF3 <- DF3[,c("date","totalsamplestested")]
+############# setnames(DF3,c("dateyear","totalsamplestested"))
+############# DF3 <- data.table(DF3)
+############# DF3 <- aggregate(totalsamplestested ~ dateyear, data = DF3, max)
+# DF3 <- DF3[rev(order(as.Date(DF3$dateyear, format = "%Y-%m-%d"))),]
+############# DF3$totalsamplestested[DF3$totalsamplestested==""] <- NA
+# str(DF3)
+############# DF3$totalsamplestested <- na.locf(DF3$totalsamplestested, na.rm=FALSE)
+############# DF3$totalsamplestested <- as.integer(DF3$totalsamplestested)
+############# DF3$Dailysampletested <- ave(DF3$totalsamplestested, FUN=function(x) c(0, diff(x)))
+############# DF3 <- DF3[rev(order(as.Date(DF3$dateyear, format = "%Y-%m-%d"))),]
 
-master <- merge(x=DF1,y=DF3,by.x='dateyear',by.y='dateyear',all=F)
-master <- master[rev(order(as.Date(master$dateyear, format = "%Y-%m-%d"))),]
+############# master <- merge(x=DF1,y=DF3,by.x='dateyear',by.y='dateyear',all=F)
+############# master <- master[rev(order(as.Date(master$dateyear, format = "%Y-%m-%d"))),]
 
-#### tt3 <- paste0("D:\\covid19india\\pkgdevlopment\\miryati\\R\\input\\statewise_8_", format(Sys.time(), "%Y%m%d"), ".csv")
-#### write.table(master,tt3 ,na = 'NA', sep = ',',row.names = F, col.names = T,quote = TRUE)
+# tt3 <- paste0("D:\\covid19india\\pkgdevlopment\\miryati\\R\\input\\statewise_8_", format(Sys.time(), "%Y%m%d"), ".csv")
+# write.table(master,tt3 ,na = 'NA', sep = ',',row.names = F, col.names = T,quote = TRUE)
 
 ####### str(master)
-gc()
+#gc()
 
 ##   .rs.restartR()
 ########################################################                             

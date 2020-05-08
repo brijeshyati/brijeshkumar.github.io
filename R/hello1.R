@@ -65,7 +65,7 @@ DF3 <- data.table(DF3)
 DF3 <- aggregate(totalsamplestested ~ dateyear, data = DF3, max)
 ####### DF3 <- DF3[rev(order(as.Date(DF3$dateyear, format = "%Y-%m-%d"))),]
 DF3$totalsamplestested[DF3$totalsamplestested==""] <- NA
-str(DF3)
+###### str(DF3)
 DF3$totalsamplestested <- na.locf(DF3$totalsamplestested, na.rm=FALSE)
 DF3$totalsamplestested <- as.integer(DF3$totalsamplestested)
 DF3$Dailysampletested <- ave(DF3$totalsamplestested, FUN=function(x) c(0, diff(x)))

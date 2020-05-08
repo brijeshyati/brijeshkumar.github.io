@@ -1,0 +1,23 @@
+Package: covid19india
+Type: Package
+Title: covid19indiastatestatus(https://www.covid19india.org/)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "brijesh",
+           family = "kumar",
+           role = c("aut", "cre"),
+           email = "brijesh.kmar@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: What the package does (one paragraph).
+License: GPL-2 `use_mit_license()`, `use_gpl3_license()` or friends to
+        pick a license
+Encoding: UTF-8
+LazyData: FLASE
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
+Imports:
+Suggests: knitr
+NeedsCompilation: no
+Packaged: 2020-05-08 14:26:59 UTC; Brijesh1.Kumar
+Author: brijesh kumar [aut, cre] (<https://orcid.org/YOUR-ORCID-ID>)
+Maintainer: brijesh kumar <brijesh.kmar@gmail.com>

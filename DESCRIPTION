@@ -1,7 +1,7 @@
 Package: covid19india
 Type: Package
 Title: covid19indiastatestatus(https://www.covid19india.org/)
-Version: 0.0.0.9000
+Version: 0.0.1.0000
 Authors@R: 
     person(given = "brijesh",
            family = "kumar",
@@ -9,8 +9,7 @@ Authors@R:
            email = "brijesh.kmar@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: What the package does (one paragraph).
-License: GPL-2 `use_mit_license()`, `use_gpl3_license()` or friends to
-        pick a license
+License: GPL-2
 Encoding: UTF-8
 LazyData: FLASE
 Roxygen: list(markdown = TRUE)

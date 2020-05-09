@@ -15,7 +15,7 @@ LazyData: FLASE
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
 Imports:
-    tidyverse,ggplot2,gridExtra,grid,anytime,jsonlite,data.table,tidyverse,zoo
+    tidyverse,ggplot2,gridExtra,grid,anytime,jsonlite,tidyverse,zoo
 Suggests: knitr
 NeedsCompilation: no
 Packaged: 2020-05-08 14:26:59 UTC; Brijesh1.Kumar

@@ -2,7 +2,7 @@
 % Please edit documentation in R/hello1.R
 \name{statwiseprogress}
 \alias{statwiseprogress}
-\title{Predicts Stock Price Movement for Given Stock Symbol}
+\title{daily count of confirmed and recovered}
 \usage{
 statwiseprogress(symbol)
 }
@@ -13,6 +13,6 @@ statwiseprogress(symbol)
 This package predicts whether the stock price at tommorow's market close would be higher or lower compared to today's closing place.
 }
 \examples{
- statwiseprogress('AAPL')
+ statwiseprogress(10)
 
 }

@@ -93,7 +93,8 @@ DF2$statecode
   ####### tt2 <- paste0("D:\\covid19india\\pkgdevlopment\\miryati\\R\\input\\statewise_", format(Sys.time(), "%Y%m%d"), ".csv")
   # write.table(DF2,tt2 ,na = 'NA', sep = ',',row.names = F, col.names = T,quote = TRUE)
   ####### covnat <- read.csv(file=tt2, header=TRUE, sep=",",stringsAsFactors = FALSE)
-  covnat <- read.csv(DF2, header=TRUE, sep=",",stringsAsFactors = FALSE)                          
+  ####### covnat <- read.csv(DF2, header=TRUE, sep=",",stringsAsFactors = FALSE)
+  covnat <- DF2
   covnat$date <-  as.Date(as.POSIXct(covnat$date ,"%y-%m-%d"))  ### character to date format
 
   ############ names(covnat)

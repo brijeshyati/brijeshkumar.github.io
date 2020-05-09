@@ -13,7 +13,7 @@ statwiseprogress<-function(symbol)
 {
 library("anytime")
 library("jsonlite")
-library("data.table")
+########## library("data.table")
 library("tidyverse")
 library("zoo")
 library("ggplot2")

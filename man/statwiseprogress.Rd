@@ -2,7 +2,7 @@
 % Please edit documentation in R/hello1.R
 \name{statwiseprogress}
 \alias{statwiseprogress}
-\title{daily count of confirmed and recovered}
+\title{Predicts Stock Price Movement for Given Stock Symbol}
 \usage{
 statwiseprogress(symbol)
 }
